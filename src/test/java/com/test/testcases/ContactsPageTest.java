@@ -41,7 +41,6 @@ public class ContactsPageTest extends TestBase{
 	
 	@Test (priority =2)
 	public void selectContactsByName() {		
-		//driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		contactsPage.selectContactsByName("Demo 123");
 	}
 	
@@ -52,7 +51,7 @@ public class ContactsPageTest extends TestBase{
 	}
 	//working
 	@Test (priority =3, dataProvider = "getCRMTestData")
-	public void validateCreateNewContact(String firstname, String lastname) {		
+	public void validateCreateNewContact(String firstname, String lastname) {
 		contactsPage.clickOnNewContactsLink();
 		//contactsPage.createNewContact("test1", "t");
 		contactsPage.createNewContact(firstname, lastname);

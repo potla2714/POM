@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="POM First Suite">
-  <test name="First Test cases">
-    <classes>
-      <class name="com.test.testcases.ContactsPageTest"/>
-      <class name="com.test.testcases.HomePageTest"/>
-      <!-- <class name="com.test.testcases.LoginPageTest"/> -->
-    </classes>
-  </test> <!-- Test1 -->
+	<listeners>
+		<listener
+			class-name="com.test.ExtentReportListener.ExtentReporterNG" />
+	</listeners>
+	<test name="First Test cases">
+		<classes>
+			<class name="com.test.testcases.ContactsPageTest" />
+			<class name="com.test.testcases.HomePageTest" />
+			<!-- <class name="com.test.testcases.LoginPageTest"/> -->
+		</classes>
+	</test> <!-- Test1 -->
 </suite> <!-- Suite1 -->

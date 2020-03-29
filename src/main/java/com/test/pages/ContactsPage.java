@@ -11,7 +11,7 @@ public class ContactsPage extends TestBase{
 	@FindBy(xpath="//div[@class='ui header item mb5 light-black']")
 	WebElement contactsLabel;
 	
-	@FindBy(xpath = "//button[@class='ui linkedin button']//i[@class='edit icon']")
+	@FindBy(xpath = "//button[contains(text(),'New')]")
 	WebElement newContactsBtn;
 	
 	@FindBy(name = "first_name")
