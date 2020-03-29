@@ -9,14 +9,18 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.test.helper.TestHelper;
+import com.test.helper.WebEventListener;
 
 public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
 	public static String projectPath =System.getProperty("user.dir");
+	public  static EventFiringWebDriver e_driver;
+	public static WebEventListener eventListener;
 
 	public TestBase() {
 		try {
@@ -41,6 +45,11 @@ public class TestBase {
 			System.setProperty("webdriver.gecko.driver", projectPath+"/Drivers/GeckoDriver/geckodriver.exe");
 			driver = new FirefoxDriver();			
 		}
+		e_driver = new EventFiringWebDriver(driver);
+		// Now create object of EventListerHandler to register it with EventFiringWebDriver
+		eventListener = new WebEventListener();
+		e_driver.register(eventListener);
+		driver = e_driver;
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestHelper.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
