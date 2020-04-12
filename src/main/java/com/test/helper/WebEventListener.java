@@ -1,6 +1,6 @@
 
 package com.test.helper;
-/*************************************** PURPOSE **********************************Updated
+/*************************************** PURPOSE **********************************Updated123
  - This class implements the WebDriverEventListener, which is included under events.
  The purpose of implementing this interface is to override all the methods and define certain useful  Log statements 
  which would be displayed/logged as the application under test is being run.

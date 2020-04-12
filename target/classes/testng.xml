@@ -3,13 +3,16 @@
 <suite name="POM First Suite">
 	<listeners>
 		<listener
-			class-name="com.test.ExtentReportListener.ExtentReporterNG" />
+			class-name="com.test.ExtentReportListener.ExtentReporterNG" />			
+	
+	<listener
+			class-name="com.test.listener.TestJiraListener" />			
 	</listeners>
 	<test name="First Test cases">
 		<classes>
-			<class name="com.test.testcases.ContactsPageTest" />
-			<class name="com.test.testcases.HomePageTest" />
-			<!-- <class name="com.test.testcases.LoginPageTest"/> -->
+		<!-- <class name="com.test.testcases.ContactsPageTest" /> -->
+		<!-- <class name="com.test.testcases.HomePageTest" /> -->
+			 <class name="com.test.testcases.LoginPageTest"/> 
 		</classes>
 	</test> <!-- Test1 -->
 </suite> <!-- Suite1 -->

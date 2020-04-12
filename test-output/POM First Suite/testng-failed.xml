@@ -3,17 +3,17 @@
 <suite name="Failed suite [POM First Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.test.ExtentReportListener.ExtentReporterNG"/>
+    <listener class-name="com.test.listener.TestJiraListener"/>
   </listeners>
   <test thread-count="5" name="First Test cases(failed)">
     <classes>
-      <class name="com.test.testcases.ContactsPageTest">
+      <class name="com.test.testcases.LoginPageTest">
         <methods>
-          <include name="selectContactsByName"/>
-          <include name="validateCreateNewContact" invocation-numbers="0 1 2"/>
           <include name="tearDown"/>
+          <include name="crmLogoImgTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.test.testcases.ContactsPageTest -->
+      </class> <!-- com.test.testcases.LoginPageTest -->
     </classes>
   </test> <!-- First Test cases(failed) -->
 </suite> <!-- Failed suite [POM First Suite] -->
