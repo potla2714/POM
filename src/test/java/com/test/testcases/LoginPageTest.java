@@ -32,12 +32,12 @@ public class LoginPageTest extends TestBase{
 		Assert.assertEquals(title, "Cogmento CRM");
 	}
 	
-	@JiraPolicy(logTicketReady=true)
+	/*@JiraPolicy(logTicketReady=true)
 	@Test(priority=2)
 	public void crmLogoImgTest() {
 		boolean flag = loginPage.validateCRMLogo();
 		Assert.assertTrue(flag);
-	}
+	}*/
 	
 	@JiraPolicy(logTicketReady=true)
 	@Test(priority=3)
