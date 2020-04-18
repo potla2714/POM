@@ -25,7 +25,7 @@ public class TestBase {
 	public TestBase() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("D:\\WorkSpace1\\POM_First\\src\\main\\java\\com\\test\\config\\config.properties");
+			FileInputStream ip = new FileInputStream(projectPath +"\\src\\main\\java\\com\\test\\config\\config.properties");
 			prop.load(ip);
 
 		} catch(FileNotFoundException e) {
